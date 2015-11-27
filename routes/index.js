@@ -18,19 +18,32 @@ router.all('*', function(req, res, next) {
 
 
 
-/* GET home page. */
+/* home page */
 router.get('/', function(req, res) {
     res.setLocale('tr');
-    res.render('index', {title: res.__('Express'), welcome: res.__("Welcome")});
+    res.render('index', {
+        title: res.__('Express'),
+        welcome: res.__("Welcome"),
+        basicInfo: res.__("basicInfo")
+    });
 });
 router.get('/en', function(req, res){
     //res.setLocale('en');
-    res.render('index', { title: res.__('Express'), welcome: res.__("Welcome") });
+    res.render('index', {
+        title: res.__('Express'),
+        welcome: res.__("Welcome"),
+        basicInfo: res.__("basicInfo")
+    });
 });
 
-router.get('/*', function(req, res) {
+/* search */
+router.get('/arama', function(req, res) {
     res.setLocale('tr');
-    res.render('index', {title: res.__('Express'), welcome: res.__("Welcome")});
+    res.render('search', {title: res.__('Express'), welcome: res.__("Welcome")});
+});
+router.get('/search', function(req, res){
+    //res.setLocale('en');
+    res.render('search', { title: res.__('Express'), welcome: res.__("Welcome") });
 });
 
 module.exports = router;

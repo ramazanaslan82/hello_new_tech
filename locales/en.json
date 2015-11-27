@@ -15,5 +15,6 @@
         "one": "There is one monkey in the %%s",
         "other": "There are %d monkeys in the %%s"
     },
-    "tree": "tree"
+    "tree": "tree",
+    "basicInfo": "Text can be included in a number of different ways."
 }

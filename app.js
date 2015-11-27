@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var i18n = require("i18n");
-var debug = require('debug')('i18n:debug');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -63,6 +62,7 @@ var app = express();
 
 // default: using 'accept-language' header to guess language settings
 app.use(i18n.init);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
