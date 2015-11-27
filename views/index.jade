@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.login_bar
+    ul
+      li Linkler
+      li Forum
+      li İletişim
+
+  h1= title
+  p Welcome to #{title}
+
+  h2= welcome
+  p
+    ||| Text can be included in a number of
+    | different ways.
+  p.
+    This way is shortest if you need big
+    blocks of text spanning multiple
+    lines.
+
+  h3(id="title") Welcome to Jade
+  button(class="btn", data-action="bea").
+    Be Awesome
+
+  h5#title5 Welcome to Jade
+  button.btn(data-action="bea") Awesome

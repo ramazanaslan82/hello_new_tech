@@ -1,0 +1,30 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+.login_bar {
+  padding: 12px;
+  background-color: #ff0;
+  border: 1px solid #808080;
+  margin: 1px;
+  height: 14px;
+}
+.login_bar ul {
+  padding: 0px;
+  margin: 0px;
+}
+.login_bar ul li {
+  top: 0px;
+  float: right;
+  margin: 0px;
+  padding: 0px 4px 0px 4px;
+  display: inline;
+}
+.login_bar ul li:not(:first-child):not(:last-child) {
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+}
