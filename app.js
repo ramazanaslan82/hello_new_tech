@@ -9,6 +9,17 @@ var i18n = require("i18n");
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+// Database
+var dbConnection = null;
+var MongoClient = require('mongodb').MongoClient;
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/test", function(err, db) {
+  if (!err) {
+    console.log("We are connected");
+  }
+  dbConnection = db;
+});
+
 
 i18n.configure({
   // setup some locales - other locales default to en silently
@@ -63,6 +74,11 @@ var app = express();
 // default: using 'accept-language' header to guess language settings
 app.use(i18n.init);
 
+// Make our db accessible to our router
+app.use(function(req,res,next){
+  req.db = dbConnection;
+  next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

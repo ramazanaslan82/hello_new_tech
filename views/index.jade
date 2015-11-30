@@ -3,17 +3,20 @@ extends layout
 block content
   div.login_bar
     ul
-      li Linkler
+      li #{__('Links')}
       li Forum
       li İletişim
 
   h1= title
   p Welcome to #{title}
 
-  h2= welcome
+  h2
+    | #{__('Welcome')}
   p
-    | #{Text can be included in a number of different ways.
-    | #{welcome}
+    | #{basicInfo}
+    | #{__('basicInfo')}
+    | {{basicInfo}}
+
   p.
     This way is shortest if you need big
     blocks of text spanning multiple
